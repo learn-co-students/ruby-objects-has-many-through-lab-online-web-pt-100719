@@ -5,17 +5,14 @@ class Artist
     @name = name
     @songs = []
     @@all << self
-    @songs << name
   end
 
   def self.all
     @@all
   end
   def new_song(name, genre)
-		self.songs << name
-		self.genre = genre
-  end
-  def self.songs
-    Song.all
+    @songs << self
+  def songs
+    @songs
   end
 end
